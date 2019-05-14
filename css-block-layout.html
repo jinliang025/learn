@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS-BLOCK-LAYOUT</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+    }
+    
+    header p {
+        margin: 0px auto;
+        width: 600px;
+    }
+    
+    header {
+        background-color: black;
+        color: white;
+    }
+    
+    div section {
+        width: 600px;
+        margin: 16px auto;
+    }
+    
+    div ul.biaoge li {
+        list-style-type: none;
+        box-sizing: border-box;
+        width: 180px;
+        height: 40px;
+        border: 3px solid;
+        margin-bottom: 15px;
+        background-color: pink;
+        text-align: center;
+        line-height: 34px;
+    }
+    
+    ul.biaoge {
+        width: 600px;
+        margin: 0px auto;
+        padding: 0px;
+    }
+    
+    ul.biaoge li:nth-child(n+5) {
+        margin-left: 210px;
+    }
+    
+    ul.biaoge li:nth-child(n+9) {
+        margin-left: 420px;
+    }
+    
+    ul.biaoge li:nth-child(4n+5) {
+        margin-top: -220px;
+    }
+    
+    ul.biaoge li:hover {
+        background-color: red;
+    }
+    
+    ul.link {
+        width: 600px;
+        margin: 0px auto;
+        padding: 0px;
+    }
+    
+    ul.link li {
+        list-style-type: none;
+        margin: 0px;
+        border-bottom: 1px dotted;
+    }
+    
+    ul.link li:last-child {
+        border: none;
+        margin-bottom: 16px;
+    }
+    
+    p.last {
+        margin: 0px auto;
+        margin-top: 16px;
+        width: auto;
+        text-align: center;
+        background-color: #ee82ee;
+    }
+</style>
+
+<body>
+
+    <header>
+        <p>hello world 请调整浏览器窗口大小查看效果</p>
+    </header>
+    <div>
+        <section>
+            页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+        </section>
+        <ul class="biaoge">
+            <li>宽180高40(包含边框)</li>
+            <li>水平间隙30px</li>
+            <li>垂直间隙15px</li>
+            <li>边框宽度3px</li>
+            <li>产品</li>
+            <li>产品</li>
+            <li>产品</li>
+            <li>产品</li>
+            <li>产品</li>
+            <li>产品</li>
+            <li>产品</li>
+            <li>产品</li>
+        </ul>
+        <ul class="link">
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+        </ul>
+    </div>
+
+
+    <p class="last">©版权所有<br>本页所有布局均使用块元素</p>
+
+
+
+</body>
+
+</html>
