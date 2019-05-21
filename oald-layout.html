@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    html,
+    body {
+        margin: 0;
+        height: 100%;
+    }
+    
+    div.first {
+        height: 100%;
+        font-size: 0;
+    }
+    
+    div>aside {
+        width: 20%;
+        height: 100%;
+        display: inline-block;
+    }
+    
+    div>main {
+        width: 40%;
+        height: 100%;
+        display: inline-block;
+        background-color: pink;
+        position: relative;
+    }
+    
+    .a {
+        background-color: red;
+    }
+    
+    .b {
+        background-color: green;
+    }
+    
+    .c {
+        background-color: #666;
+    }
+    
+    header {
+        background-color: blue;
+        width: 100%;
+    }
+    
+    div.placeholder {
+        padding-top: 20%;
+    }
+    
+    main>div.content {
+        background-color: yellow;
+        margin-top: 20%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+
+
+<body>
+    <div class="first">
+        <aside class="a"></aside>
+        <main>
+
+            <div class="placeholder"></div>
+
+            <div class="content"></div>
+        </main>
+        <aside class="b"></aside>
+        <aside class="c"></aside>
+    </div>
+</body>
+
+</html>
