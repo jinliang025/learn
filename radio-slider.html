@@ -6,56 +6,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>小米商城</title>
+    <link rel="shortcut icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon" />
+    <style>
+        * {
+            margin: 0px;
+        }
+        
+        div.top {
+            background-color: #333;
+            height: 40px;
+            font-size: 12px;
+        }
+        
+        div.top-left {
+            display: block;
+            width: 1226px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        div.top-left a#download:hover::before {
+            content: "";
+            position: absolute;
+            top: 32px;
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 8px solid #fff;
+        }
+        
+        div.top-left a#download:hover::after {
+            content: "小米商城APP";
+            font-size: 14px;
+            width: 90px;
+            height: 90px;
+            border: 15px solid #fff;
+            background: url(https://i1.mifile.cn/f/i/17/appdownload/download.png?1);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            position: absolute;
+            margin: 40px 0 0 -90px;
+            z-index: 9999;
+            color: black;
+            line-height: 200px;
+            box-shadow: 0px 1px 5px #b0b0b0;
+            padding-bottom: 20px;
+            background-color: #FFF;
+        }
+        
+        div.top-right {
+            display: block;
+            float: right;
+            position: relative;
+        }
+        
+        span.top {
+            color: #424242;
+            margin: 0.5em;
+        }
+        
+        a {
+            color: #b0b0b0;
+            text-decoration: none;
+            line-height: 40px;
+            display: inline-block;
+        }
+        
+        a:hover {
+            color: #fff;
+        }
+        
+        .picture {
+            width: 1226px;
+            height: 460px;
+            border: 3px solid transparent;
+            position: absolute;
+            top: 140px;
+        }
+        
+        .picture input {
+            display: none;
+            position: absolute;
+        }
+        
+        .picture img {
+            opacity: 0;
+            width: 1226px;
+            height: 460px;
+            position: absolute;
+            transition: 2s;
+            display: block;
+        }
+        
+        .picture .la {
+            position: absolute;
+            top: 420px;
+            left: 1100px;
+            z-index: 1;
+        }
+        
+        .picture .la label {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            cursor: pointer;
+            border: 2px solid grey;
+            background-color: rgba(128, 40, 40, 0.3);
+            border-radius: 50%;
+        }
+        
+        .picture .la label:hover {
+            background-color: #fff;
+        }
+        
+        .picture input:checked+img {
+            opacity: 1;
+        }
+    </style>
 </head>
-<style>
-    .picture {
-        width: 1225px;
-        height: 467px;
-        border: 3px solid transparent;
-        position: absolute;
-    }
-    
-    .picture input {
-        display: none;
-        position: absolute;
-    }
-    
-    .picture img {
-        opacity: 0;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        transition: 2s;
-    }
-    
-    .picture .la {
-        position: absolute;
-        top: 420px;
-        left: 1100px;
-        z-index: 1;
-    }
-    
-    .picture .la label {
-        display: inline-block;
-        width: 6px;
-        height: 6px;
-        cursor: pointer;
-        border: 2px solid grey;
-        background-color: rgba(128, 40, 40, 0.3);
-        border-radius: 50%;
-    }
-    
-    .picture .la label:hover {
-        background-color: #fff;
-    }
-    
-    .picture input:checked+img {
-        opacity: 1;
-    }
-</style>
 
 <body>
+    <div class="top">
+        <div class="top-left">
+            <a href="https://www.mi.com/index.html">小米商城</a><span class="top">|</span>
+            <a href="https://www.miui.com/">MIUI</a><span class="top">|</span>
+            <a href="https://iot.mi.com/index.html">lOT</a><span class="top">|</span>
+            <a href="https://i.mi.com/">云服务</a><span class="top">|</span>
+            <a href="https://jr.mi.com/?from=micom">金融</a><span class="top">|</span>
+            <a href="https://youpin.mi.com/">有品</a><span class="top">|</span>
+            <a href="https://xiaoai.mi.com/">小爱开放平台</a><span class="top">|</span>
+            <a href="https://qiye.mi.com/">企业团购</a><span class="top">|</span>
+            <a href="https://www.mi.com/aptitude/list/?id=41">资质证照</a><span class="top">|</span>
+            <a href="https://www.mi.com/aptitude/list/">协议规则</a><span class="top">|</span>
+            <a href="https://www.mi.com/appdownload/" id="download">下载app</a><span class="top">|</span>
+            <a href="https://www.mi.com/#J_modal-globalSites">Select Region</a><span class="top">|</span>
+        </div>
+        <div class="top-right">
+            <a href="javascript:void(0);">登录</a>
+            <a href="javascript:void(0);">注册</a>
+            <a href="">消息通知</a>
+        </div>
+        <div class="buycar">
+            <span>购物车（0）</span>
+        </div>
+
+    </div>
+
     <div class="picture">
         <div class="la">
             <label for="1"></label>
