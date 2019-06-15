@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .cube {
+            xperspective: 1000px;
+            height: 150px;
+            width: 150px;
+            margin: 200px auto;
+            transform-style: preserve-3d;
+            transform-origin: center center 75px;
+            position: relative;
+            transition: 500s linear;
+        }
+        
+        div {
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            border: 1px solid lime;
+            text-align: center;
+            line-height: 150px;
+        }
+        
+        .one {
+            top: -151px;
+            transform: rotatex(-90deg);
+            transform-origin: bottom;
+            background: linear-gradient(to left, red, white);
+        }
+        
+        .two {
+            left: -151px;
+            transform: rotatey(90deg);
+            transform-origin: right;
+            background: linear-gradient(to left, tan, green);
+        }
+        
+        .three {
+            left: 151px;
+            transform: rotatey(-90deg);
+            transform-origin: left;
+            background: linear-gradient(to left, red, yellow);
+        }
+        
+        .four {
+            z-index: -1;
+            background: linear-gradient(to left, black, white);
+        }
+        
+        .five {
+            top: 151px;
+            transform: rotatex(90deg);
+            transform-origin: top;
+            background: linear-gradient(to left, blue, white);
+        }
+        
+        .six {
+            transform: translatez(151px);
+            z-index: 2； background: linear-gradient(to left, lime, blue);
+        }
+        
+        section:hover {
+            transform: rotatex(99999deg) rotatey(9999999deg) rotate(99999deg);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="cube">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="six"></div>
+    </section>
+</body>
+
+</html>

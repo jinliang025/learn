@@ -19,6 +19,7 @@
             width: 100%;
             height: 800px;
             background-size: cover;
+            background-position: center center;
         }
         
         @media (max-width:1060px) {
@@ -46,8 +47,10 @@
         .mid img {
             float: left;
             width: 25%;
-            height: 280px;
+            height: 260px;
             border: 2px solid white;
+            background-position: center center;
+            background-size: cover;
         }
         
         @media (max-width:1060px) {
@@ -69,13 +72,13 @@
             background-repeat: no-repeat;
         }
         
-        div.link {
-            float: left;
-            padding: 45px 0;
+        .links {
             display: flex;
-            flex-basis: 1;
+            width: 100%;
+        }
+        
+        .link {
             flex-grow: 1;
-            flex-shrink: 1;
         }
         
         div.word {
