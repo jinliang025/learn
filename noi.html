@@ -89,7 +89,8 @@
 </script>
 
 <script id="ch0103/13">
-    var n = Number(prompt('please input n')) var a = n % 10
+    var n = Number(prompt('please input n'))
+    var a = n % 10
     var b = (n % 100 - a) / 10
     var c = (n - n % 100) / 100
     var r = "" + a + b + c
@@ -371,15 +372,15 @@
     var b = Number(prompt('please input b'))
     var c = Number(prompt('please input c'))
     var delta = 4 * a * c
+    var s_delta = Math.sqrt(4 * a * c - b * b)
     if ((b * b) == delta) {
-        console.log('x1=x2=' + -b / 2 / a)
+        console.log('x1=x2=' + (-b / 2 / a).toFixed(5))
     } else if ((b * b) > delta) {
-        var s_delta = Math.sqrt(delta)
-        console.log('x1=' + (-b + s_delta) / 2 / a)
-        console.log('x2=' + (-b - s_delta) / 2 / a)
+        console.log('x1=' + ((-b + s_delta) / 2 / a).toFixed(5))
+        console.log('x2=' + ((-b - s_delta) / 2 / a).toFixed(5))
     } else if ((b * b) < delta) {
-        console.log(-b / (2 * a) + '+' + s_delta / (2 * a) + 'i')
-        console.log(-b / (2 * a) + '-' + s_delta / (2 * a) + 'i')
+        console.log('x1=' + (-b / (2 * a)).toFixed(5) + '+' + (s_delta / (2 * a)).toFixed(5) + 'i')
+        console.log('x2=' + (-b / (2 * a)).toFixed(5) + '-' + (s_delta / (2 * a)).toFixed(5) + 'i')
     }
 </script>
 
