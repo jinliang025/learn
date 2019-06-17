@@ -79,7 +79,7 @@
     var b = Number(prompt('please input b'))
     var c = a / b | 0
     var r = a - b * c
-    console.log(r)
+    console.log(r.toFixed(4))
 </script>
 
 <script id="ch0103/12">
@@ -374,7 +374,8 @@
     var delta = 4 * a * c
     var s_delta = Math.sqrt(4 * a * c - b * b)
     if ((b * b) == delta) {
-        console.log('x1=x2=' + (-b / 2 / a).toFixed(5))
+        console.log('x1=' + ((-b + s_delta) / 2 / a).toFixed(5))
+        console.log('x2=' + ((-b - s_delta) / 2 / a).toFixed(5))
     } else if ((b * b) > delta) {
         console.log('x1=' + ((-b + s_delta) / 2 / a).toFixed(5))
         console.log('x2=' + ((-b - s_delta) / 2 / a).toFixed(5))
