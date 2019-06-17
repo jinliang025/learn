@@ -391,3 +391,222 @@
     var s = n - (y / x)
     console.log(s | 0)
 </script>
+
+<script id="ch0105/01">
+    var n = Number(prompt('please input n'));
+    var counter = 0;
+    var s = 0;
+    while (counter < n) {
+        counter = counter + 1;
+        s += (+prompt('请输入学生分数'));
+    }
+    console.log((s / n).toFixed(2))
+</script>
+
+<script id="ch0105/02">
+    var result = 0;
+    for (var n = 0; n < 12; n = n + 1)
+        result += (+prompt('请输入结余'))
+    console.log('$' + (result / 12).toFixed(2))
+</script>
+
+<script id="ch0105/03">
+    var n = Number(prompt('请输入一个整数'));
+    var result = 0;
+    for (var number = 0; number < n; number = number + 1)
+        result += (+prompt('请输入样本'))
+    console.log((result / n).toFixed(4))
+</script>
+
+<script id="ch0105/04">
+    var n = Number(prompt('请输入一个整数'));
+    var s = 0;
+    for (var number = 0; number < n; number = number + 1)
+        s += (+prompt('please input n'))
+    console.log(s, Number((s / n)).toFixed(5))
+</script>
+
+<script id="ch0105/05">
+    var n = Number(prompt('请输入一个整数'));
+    var max = 0;
+    for (var number = 0; number < n; number = number + 1) {
+        var input = (+prompt('please input n'));
+        max = (max > input ? max : input)
+    }
+    console.log(max)
+</script>
+
+<script id="ch0105/06">
+    var n = Number(prompt('请输入一个整数'));
+    var max = 0;
+    var min = 100;
+    for (var number = 0; number < n; number = number + 1) {
+        var input = (+prompt('please input n'));
+        min = (min < input ? min : input);
+        max = (max > input ? max : input)
+    }
+    console.log(max)
+</script>
+
+<script id="ch0105/07">
+    var n = Number(prompt('请输入一个整数'));
+    var j = 0;
+    var y = 0;
+    var t = 0;
+    for (var number = 0; number < n; number = number + 1) {
+        j += (+prompt('请输入金牌'));
+        y += (+prompt('请输入银牌'));
+        t += (+prompt('请输入铜牌'))
+    }
+    console.log(j, y, t, j + y + t)
+</script>
+
+<script id="ch0105/08">
+    var n = Number(prompt('请输入一个整数'));
+    var input = 0;
+    for (var number = 1; number < n; number = number + 1) {
+        input += (+prompt('please input'))
+    }
+    console.log((n - 2) * 180 - input)
+</script>
+
+<script id="ch0105/09">
+    var m = Number(prompt('请输入一个整数'));
+    var n = Number(prompt('请输入一个整数'));
+    var k = 0;
+    for (var s = m; s < (n + 1); s = s + 1) {
+        if (s % 2 == 1) {
+            k += s;
+        } else {
+            k += 0;
+        }
+    }
+    console.log(k)
+</script>
+
+<script id="ch0105/10">
+    var m = Number(prompt('请输入一个整数'));
+    var n = Number(prompt('请输入一个整数'));
+    var k = 0;
+    for (var s = m; s < (n + 1); s = s + 1) {
+        if (s % 17 == 0) {
+            k += s;
+        } else {
+            k += 0;
+        }
+    }
+    console.log(k)
+</script>
+
+<script id="ch0105/11">
+    var k = Number(prompt('请输入一个整数'));
+    var k1 = 0;
+    var k5 = 0;
+    var k10 = 0;
+    for (var number = 0; number < k; number = number + 1) {
+        var n = (+prompt('please input n'));
+        if (n == 1) {
+            k1 = k1 + 1;
+        } else if (n == 5) {
+            k5 = k5 + 1;
+        } else if (n == 10) {
+            k10 = k10 + 1;
+        }
+    }
+    console.log(k1)
+    console.log(k5)
+    console.log(k10)
+</script>
+
+<script id="ch0105/12">
+    var n = Number(prompt('请输入一个整数'));
+    var m = Number(prompt('请输入一个整数'));
+    var k = 0;
+    for (var number = 0; number < n; number = number + 1) {
+        var input = (+prompt('please input '));
+        if (input == m) {
+            k = k + 1;
+        }
+    }
+    console.log(k)
+</script>
+
+<script id="ch0105/13">
+    var a = Number(prompt('请输入一个整数'));
+    var n = Number(prompt('请输入一个整数'));
+    var s = a;
+    for (var number = 1; number < n; number = number + 1) {
+        var s = s * a
+    }
+    console.log(s)
+</script>
+
+<script id="ch0105/14">
+    var x = Number(prompt('请输入一个整数'));
+    var n = Number(prompt('请输入一个整数'));
+    var s = x;
+    for (var number = 0; number < n; number = number + 1) {
+        s *= 1.001
+    }
+    console.log(s.toFixed(4))
+</script>
+
+<script id="ch0105/15">
+    var r = Number(prompt('请输入一个整数'));
+    var m = Number(prompt('请输入一个整数'));
+    var y = Number(prompt('请输入一个整数'));
+    var s = m;
+    for (var number = 0; number < y; number = number + 1) {
+        s *= 1.05
+    }
+    console.log(s | 0)
+</script>
+
+<script id="ch0105/16">
+    var n = Number(prompt('请输入一个整数'));
+    var k = Number(prompt('请输入一个整数'));
+    var s = 200;
+    for (var number1 = 1; number1 <= 20; number1 = number1 + 1) {
+
+        if ((n * number1) >= s) {
+            console.log(number1)
+            break;
+        }
+        s *= (1 + k / 100)
+    }
+</script>
+
+<script id="ch0105/17">
+    var n = Number(prompt('请输入一个整数'));
+    var last = 1
+    var last2 = 0
+    var current = last2
+    for (var i = 1; i <= n; i++) {
+        last2 = last
+        last = current
+        current = last + last2
+    }
+    console.log(current)
+</script>
+
+<script id="ch0105/18">
+    var n = Number(prompt('请输入一个整数'));
+    var x = Number(prompt('input1'))
+    var y = Number(prompt('input2'))
+    var s = y / x;
+    for (var number = 1; number < n; number = number + 1) {
+        var a = Number(prompt('input1'));
+        var b = Number(prompt('input2'));
+        if ((s - b / a) > 0.05) {
+            console.log('worse')
+        } else if ((b / a - s) > 0.05) {
+            console.log('better')
+        } else {
+            console.log('same')
+        }
+    }
+</script>
+
+<script id="ch0105/19">
+    var n = Number(prompt('请输入一个整数'));
+</script>
