@@ -608,5 +608,366 @@
 </script>
 
 <script id="ch0105/19">
-    var n = Number(prompt('请输入一个整数'));
+    var n = Number(prompt('请输入屋顶数量'));
+    var time = 0;
+    for (var i = 0; i < n; i = i + 1) {
+        var a = Number(prompt('请输入屋顶1'));
+        var b = Number(prompt('请输入屋顶2'));
+        var c = Number(prompt('请输入人数'));
+        time += 50 / Math.sqrt(a * a + b * b) * 2 + 1.5 * c
+    }
+    console.log(Math.ceil(time))
+</script>
+
+<script id="ch0105/20">
+    var h = Number(prompt('请输入球初始高度'));
+    var s = 20;
+    for (var i = 0; i < 10; i = i + 1) {
+        s += h;
+        h = h / 2;
+    }
+    console.log(s, h)
+</script>
+
+<script id="ch0105/21">
+    var n = Number(prompt('请输入正整数'));
+    for (var i = 0;; i++) {
+        if (n == 1) {
+            console.log('End');
+            break;
+        } else if (n % 2 == 1) {
+            n = n * 3 + 1;
+            console.log(n)
+        } else if (n % 2 == 0) {
+            n = n / 2;
+            console.log(n)
+        }
+    }
+</script>
+
+<script id="ch0105/22">
+    var x = 0;
+    var y = 0;
+    for (i = 1; i < 13; i++) {
+        x = Number(prompt('请输入该月的预算'));
+        x += x;
+        y = 300 * i - x;
+        if ((y - x) < 0) {
+            console.log('-' + i);
+            break
+        } else {
+            Math.floor(y / 100) * 1.2 + y % 100
+        }
+    }
+</script>
+
+<script id="ch0105/23">
+    var m = Number(prompt('请输入药品总量'));
+    var n = Number(prompt('请输入取药人数'));
+    var y = m;
+    var s = 0;
+    for (i = 0; i < n; i++) {
+        var a = Number(prompt('每个人取药数量'))
+        if (a > y) {
+            s += 1;
+            y = y;
+        } else if (a < y) {
+            y = y - a
+        }
+    }
+    console.log(s)
+</script>
+
+<script id="ch0105/24">
+    var n = Number(prompt(''));
+    var s = 0;
+    for (var i = 0; i < n; i++) {
+        var a = Number(prompt('高压'));
+        var b = Number(prompt('低压'));
+        if (a >= 90 && a <= 140 && b >= 60 && b <= 90) {
+            s += 1;
+        } else {
+            s -= 1;
+        }
+    }
+    console.log(s)
+</script>
+
+<script id="ch0105/25">
+    var n = Number(prompt('十进制自然数'));
+    for (n = 49; n < 728; n++) {
+        var seven1 = n % 7
+        var seven2 = (n - seven1) / 7 % 7
+        var seven3 = ((n - seven1) / 7 - seven2) / 7 % 7
+        var nine1 = n % 9
+        var nine2 = (n - nine1) / 9 % 9
+        var nine3 = ((n - nine1) / 9 - nine2) / 9 % 9
+        if (seven3 == nine1 && seven2 == nine2 && seven1 == nine3) {
+            console.log(n, '' + seven1 + seven2 + seven3, '' + nine3 + nine2 + nine1)
+        }
+    }
+</script>
+
+<script id="ch0105/26">
+    var n = Number(prompt('四位数个数'));
+    var s = 0;
+    for (i = 0; i < n; i++) {
+        var b = Number(prompt('dad'))
+        var ge = b % 1000 % 100 % 10
+        var shi = Math.floor(b % 1000 % 100 / 10)
+        var bai = Math.floor(b % 1000 / 100)
+        var qian = Math.floor(b / 1000)
+        if ((ge - qian - bai - shi) > 0) {
+            s += 1
+        }
+    }
+    console.log(s)
+</script>
+
+<script id="ch0105/27">
+    var k = Number(prompt('请输入一个整数k'))
+    var s = 1;
+    for (var i = 1;; i++) {
+        if (s > k) {
+            break;
+        }
+        s += 1 / i;
+    }
+    console.log(i)
+</script>
+
+<script id="ch0105/28">
+    var n = prompt();
+    var a = n.split("");
+    var out = a.reverse().join(" ");
+    console.log(out);
+</script>
+
+<script id="ch0105/29">
+    var n = prompt();
+    var a = n.split("");
+    var out = a.reverse().join("");
+    console.log(out);
+</script>
+
+<script id="ch0105/30">
+    var m = Number(prompt('请输入一个整数m'));
+    var k = Number(prompt('请输入一个整数k'));
+    var s = m;
+    var a = 0;
+    for (var i = 0; i < 4; i++) {
+        if (m % 19 != 0) {
+            console.log('NO')
+        } else {
+            if (s % 10 == 0) {
+                a++
+                s = Math.floor(s / 10)
+            } else if (a == k) {}
+        }
+    }
+    console.log('YES')
+</script>
+
+<script id="ch0105/31">
+    var n = Number(prompt('灯的数量'))
+    var m = Number(prompt('人数'))
+    for (i = 1; i <= n; i++) {
+        if (Math.sqrt(i) % 1 == 0) {
+            console.log(i)
+        }
+    }
+</script>
+
+<script id="ch0105/32">
+    var n = Number(prompt('input'))
+    var p = 1;
+    var q = 2;
+    var s = 0;
+    for (var i = 0; i < n; i++) {
+        s = s + q / p;
+        p = q;
+        q = p + q - 1
+    }
+    console.log(s.toFixed(4))
+</script>
+
+<script id="ch0105/33">
+    var n = Number(prompt('input'))
+    var s = 0;
+    for (var i = 1; i <= n; i++) {
+        if (i % 2 == 0) {
+            s = s - 1 / i
+        } else {
+            s = s + 1 / i
+        }
+    }
+    console.log(s.toFixed(4))
+</script>
+
+<script id="ch0105/34">
+    var n = Number(prompt('input n'))
+    var s = 1;
+    var t = 0;
+    for (var i = 1; i <= n; i++) {
+        s *= i;
+        t += s;
+    }
+    console.log(t)
+</script>
+
+<script id="ch0105/35">
+    var n = Number(prompt('input n'))
+    var s = 1;
+    var e = 1;
+    for (var i = 1; i <= n; i++) {
+        s *= i;
+        e += 1 / s
+    }
+    console.log(e.toFixed(10))
+</script>
+
+<script id="ch0105/36">
+    var x = Number(prompt('input x'));
+    var n = Number(prompt('input n'));
+    var t = 1;
+    var s = 1;
+    for (var i = 0; i < n; i++) {
+        t *= x;
+        s += t
+    }
+    console.log(s.toFixed(2))
+</script>
+
+<script id="ch0105/37">
+    var m = Number(prompt('input 体力'));
+    var n = Number(prompt('input 战斗力'));
+    var x = Number(prompt('input 能量元素'));
+    for (var i = 0; i < x; i++) {
+        if (x > 0) {
+            n = n + Math.floor(m / n)
+        }
+        x = x - Math.ceil(m / n)
+    }
+    console.log(n)
+</script>
+
+<script id="ch0105/38">
+    var strin = ""
+    for (var i = 1; i <= 9999; i++) {
+        var c = Number(prompt('请输入幂次项为' + (n - i + 1) + '的数值'))
+        if (n == 0) {
+            strin = "0"
+            break
+        }
+        if (i == n + 1) {
+            break
+        }
+        if (c == 0) {
+            strin = strin + 0 + " "
+        } else {
+            var a = n - i + 1
+            if (i == n) {
+                strin = strin + a * c
+            } else {
+                strin = strin + a * c + " "
+            }
+        }
+    }
+    console.log(strin)
+</script>
+
+<script id="ch0105/39">
+    var x = Number(prompt('x'))
+    var result = 0
+    for (var i = 1; i <= x; i++) {
+        if (i % 7 != 0) {
+            var n = i;
+            while (n > 0) {
+                var digit = n % 10
+                if (digit == 7) {
+                    break
+                }
+                n = (n - digit) / 10
+            }
+            if (n == 0) {
+                result += i * i
+            }
+        }
+    }
+    console.log(result)
+</script>
+
+<script id="ch0105/40">
+    var n = Number(prompt(''))
+    var count = 0
+
+    for (i = 1; i <= n; i++) {
+        var m = i
+
+        while (m > 0) {
+            var digit = m % 10
+            if (digit == 1) {
+                count++
+            }
+            m = (m - digit) / 10
+        }
+    }
+    console.log(count)
+</script>
+
+<script id="ch0105/41">
+    var l = Number(prompt())
+    var r = Number(prompt())
+    var count = 0
+    for (var i = l; i <= r; i++) {
+        var m = i
+        while (m > 0) {
+            var digit = m % 10
+            if (digit == 2) {
+                count++
+            }
+            m = (m - digit) / 10
+        }
+    }
+    console.log(count)
+</script>
+
+<script id="ch0105/42">
+    var a = Number(prompt())
+    var b = Number(prompt())
+    var c = Number(prompt())
+    var d = Number(prompt())
+</script>
+
+<script id="ch0105/43">
+    var n = Number(prompt(''))
+    for (var i = 1; i <= n; i++) {
+        var m = i
+        if (n % m == 0 && m > 1) {
+            break
+        }
+
+    }
+    console.log(n / m)
+</script>
+
+<script id="ch0105/44">
+    var n = Number(prompt(''))
+    console.log()
+</script>
+
+<script id="ch0105/45">
+    var n = Number(prompt('经过多少天'))
+    var give = 1
+    var daycount = give
+    var sum = 0
+    for (var i = 0, j = 0; i < n; i++) {
+        if (j == daycount) {
+            j = 0
+            give++
+        }
+        sum += give
+        j++
+    }
+    console.log(sum)
 </script>
