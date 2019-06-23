@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>画图</title>
+    <style>
+        canvas {
+            border: 2px solid #f0f;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="400" height="300"></canvas>
+</body>
+<script>
+    var canvas = document.querySelector('canvas')
+    canvas.style.imageRendering = 'pixelated'
+    var ctx = canvas.getContext('2d')
+
+    function dot(x, y, color = 'black') {
+        ctx.fillStyle = color
+        ctx.fillRect(x, y, 1, 1)
+    }
+
+    for (var i = 0; i < 400; i++) {
+        dot(10, i, color = 'black')
+    } //一条实线
+
+    for (var i = 0; i < 400; i++) {
+        dot(20, 10 * i, color = 'black')
+    } //一条一个实点一个空点的虚线
+
+    for (var i = 0; i < 400; i++) {
+        dot(30, 5 * i + 2, color = 'black')
+    } //一条两个实点两个空点的虚线
+
+    for (var i = 0; i < 400; i++) {
+        dot(30)
+    } //三个实点两个空点的虚线
+
+    for (var i = 0; i < 400; i++) {
+        dot(i + 1, i + 1, color = 'black')
+    } //画一条45度的斜线
+
+    for (var i = 0; i < 400; i++) {
+        dot(i, 3 / 4 * i, color = 'black')
+    } //画一条跨越画布左上角和右下角的对角线
+
+
+    for (var i = 20; i <= 110; i++) {
+        for (var k = 200; k <= 290; k++) {
+            if ((i == 20 || i == 110) || (k == 200 || k == 290))
+                dot(i, k, color = 'red')
+        }
+    } //空心矩形
+
+    for (i = 120; i <= 160; i++) {
+        for (k = 220; k <= 260; k++) {
+            dot(i, k, color = "orange")
+        }
+    } //实心矩形
+
+    for (i = 0; i <= 255; i++) {
+        for (k = 0; k <= 255; k++) {
+            dot(i / 4, k / 4, 'rgb(255,' + i + ',' + k + ')')
+        }
+    } //rgb
+
+    for (i = 120; i <= 220; i++) {
+        for (k = 190; k <= 290; k++) {
+            var r = Math.pow(i - 170, 2) + Math.pow(k - 240, 2)
+            if (Math.sqrt(r) <= 50 && Math.sqrt(r) > 49) {
+                dot(i, k, color = 'green')
+            }
+        }
+    } //空心圆
+
+
+    for (i = 225; i <= 325; i++) {
+        for (k = 190; k <= 290; k++) {
+            var r = Math.pow(i - 275, 2) + Math.pow(k - 240, 2)
+            if (Math.sqrt(r) < 50) {
+                dot(i, k, color = 'green')
+            }
+        }
+    } //实现圆
+
+
+    //大小合适的sin（x)的图像
+    /**
+   * YOUR TASK
+画图的题：
+画一条实线
+
+画一条一个实点一个空点的虚线
+画一条两个实点两个空点的虚线
+画一条三个实点两个空点的虚线
+画一条45度的斜线
+画一条跨越画布左上角和右下角的对角线
+画一个空心矩形
+画一个实心矩形
+画一个rgb色彩空间的某一面
+画一个空心的圆
+画一个实心的圆
+画一个大小合适的sin(x)的图像
+   */
+</script>
+<script>
+    // YOUR CODE GOES BELOW
+</script>
+
+</html>

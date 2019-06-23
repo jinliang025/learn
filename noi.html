@@ -962,7 +962,7 @@
     var daycount = give
     var sum = 0
     for (var i = 0, j = 0; i < n; i++) {
-        if (j == daycount) {
+        if (j == give) {
             j = 0
             give++
         }
@@ -970,4 +970,161 @@
         j++
     }
     console.log(sum)
+</script>
+
+
+
+
+<script id="7">
+    var isRelatedWith7 = function(n) {
+        if (n % 7 == 0) {
+            return true
+        } else {
+            while (n > 0) {
+                var digit = n % 10
+                if (digit == 7) {
+                    return true
+                }
+                n = (n - digit) / 10
+            }
+            return false
+        }
+    }
+
+    var getNumber = function(hint) {
+        return +prompt(hint)
+    }
+
+
+    var num = getNumber('请输入')
+
+    if (isRelatedWith7(num)) {
+        console.log('YES')
+    } else {
+        console.log('NO')
+    }
+</script>
+
+<script id="narcissistic">
+    for (var i = 1; i < 1000; i++) {
+        var n = i
+        var m = n
+        var width = 0
+
+
+        while (m > 0) {
+            width++
+            var digit = m % 10
+            m = (m - digit) / 10
+        }
+
+        m = n
+
+        var sum = 0
+        while (m > 0) {
+            var digit = m % 10
+            var product = 1
+            for (var i = 0; i < width; i++) {
+                product *= digit
+            }
+            sum += product
+            m = (m - digit) / 10
+        }
+
+        if (sum == n) {
+            console.log(n)
+        } else {
+            console.log('NO')
+        }
+    }
+</script>
+
+<script id="narcissistics">
+    for (var i = 1; i < 1000; i++) {
+        var n = i
+        var m = n
+        var width = 0
+
+
+        while (m > 0) {
+            width++
+            var digit = m % 10
+            m = (m - digit) / 10
+        }
+
+        m = n
+
+        var sum = 0
+        while (m > 0) {
+            var digit = m % 10
+            var product = 1
+            for (var i = 0; i < width; i++) {
+                product *= digit
+            }
+            sum += product
+            m = (m - digit) / 10
+        }
+
+        if (sum == n) {
+            console.log('YES')
+        } else {
+            console.log('NO')
+        }
+    }
+</script>
+
+<script id="complete-number">
+</script>
+
+<script id="itob">
+    function getCharFromDigit(n) {
+        switch (digit) {
+            case 0:
+                return '0';
+            case 1:
+                return '1';
+            case 2:
+                return '2';
+            case 3:
+                return '3';
+            case 4:
+                return '4';
+            case 5:
+                return '5';
+            case 6:
+                return '6';
+            case 7:
+                return '7';
+            case 8:
+                return '8';
+            case 9:
+                return '9';
+        }
+    }
+
+
+    function itob(n) {
+        var str = ''
+
+        while (n > 0) {
+            var digit = n % 10
+            str = str + getCharFromDigit(n)
+            n = (n - digit) / 10
+        }
+
+        return str
+    }
+</script>
+
+<script id="sqrt">
+    var n = +Number(promot(''))
+
+    function sqrt(n) {
+        var x = 2
+        x = x - (x * x - n) / (2 * x)
+        x = x - (x * x - n) / (2 * x)
+        x = x - (x * x - n) / (2 * x)
+        x = x - (x * x - n) / (2 * x)
+        return x
+    }
 </script>
